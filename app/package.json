@@ -1,0 +1,26 @@
+{
+  "name": "florescent",
+  "version": "1.0.0",
+  "description": "A website for floral artist Manu Torres",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/seanpierce/florescent"
+  },
+  "keywords": [
+    "floral",
+    "art",
+    "manu",
+    "torres",
+    "florescent",
+    "django",
+    "vue"
+  ],
+  "author": "Sean Pierce",
+  "license": "MIT"
+}
