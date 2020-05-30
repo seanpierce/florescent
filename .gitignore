@@ -5,3 +5,4 @@ logs/*
 !.keep
 app/node_modules
 *.lock
+assets/dist/*
