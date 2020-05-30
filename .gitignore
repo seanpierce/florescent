@@ -3,3 +3,5 @@ db.sqlite3
 **/__pycache__
 logs/*
 !.keep
+app/node_modules
+*.lock
