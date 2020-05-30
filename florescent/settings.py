@@ -130,7 +130,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Los_Angeles'
 
 USE_I18N = True
 
@@ -139,7 +139,20 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.2/howto/static-files/
+INTERNAL_IPS = (
+    'localhost',
+    '0.0.0.0',
+    '127.0.0.1'
+)
 
-STATIC_URL = '/static/'
+# pulls in assets for the Django Admin settings
+STATIC_ROOT = 'static'
+if DEBUG:
+    STATIC_URL = '/assets/'
+else:
+    STATIC_URL = '/static/'
+
+# the location where the static assets live
+# note: when the app references the public URL, it will point to the assets folder
+# note2: all files under this directory will be pulled into the static folder
+STATICFILES_DIRS = [os.path.join('assets'),]

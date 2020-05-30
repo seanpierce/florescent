@@ -1,12 +1,24 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Florescent</title>
+    <link rel="icon" href="{% static 'images/rose.icon.png' %}" type="image/x-icon" />
+    <link href="{% static 'dist/app.css' %}" rel="stylesheet" type="text/css" />
 </head>
 <body>
     {% block content %}
     {% endblock %}
 </body>
+{% if debug %}
+<!-- development version -->
+<script src="https://unpkg.com/vue"></script>
+{% else %}
+<!-- production version -->
+<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+{% endif %}
+<script src="{% static 'dist/app.js' %}?v=1"></script>
 </html>
