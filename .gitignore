@@ -6,3 +6,4 @@ logs/*
 app/node_modules
 *.lock
 assets/dist/*
+.vscode

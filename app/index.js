@@ -9,6 +9,18 @@ export const app = new Vue({
     data: {
         loaded: false,
     },
+    methods: {
+    },
+    computed: {
+        route() {
+            switch(window.location.pathname) {
+                case '/':
+                    return 'home';
+                case '/gallery':
+                    return 'gallery';
+            }
+        }
+    },
     mounted() {
         this.loaded = true;
     },
