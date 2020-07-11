@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'gallery'
 ]
 
 MIDDLEWARE = [
@@ -156,3 +157,7 @@ else:
 # note: when the app references the public URL, it will point to the assets folder
 # note2: all files under this directory will be pulled into the static folder
 STATICFILES_DIRS = [os.path.join('assets'),]
+
+# local storage
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
