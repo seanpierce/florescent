@@ -8,7 +8,8 @@ from .views import index, gallery
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
-    path('gallery', gallery)
+    path('gallery', gallery),
+    path('api/', include('api.urls'))
 ]
 
 if settings.DEBUG:
