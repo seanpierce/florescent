@@ -15,6 +15,7 @@
         max-width: 350px;
     }
 }
+
 .v-lazy-image {
     filter: blur(10px);
     transition: filter 0.7s;
@@ -22,4 +23,18 @@
   
 .v-lazy-image-loaded {
     filter: blur(0);
+}
+
+#gallery-images {
+    text-align: center;
+    .gallery-image {
+        display: inline-block;
+        margin-right: 1em;
+        margin-bottom: 1em;
+        vertical-align: bottom;
+        img {
+            max-height: 400px;
+            max-width: 400px;
+        }
+    }
 }
