@@ -1,17 +1,14 @@
 <template>
   <div id="gallery">
-    <Menu />
     <GalleryImages />
   </div>
 </template>
 
 <script>
-import Menu from '@/components/Menu.vue';
 import GalleryImages from '@/components/gallery/GalleryImages.vue';
 
 export default {
   components: {
-    Menu,
     GalleryImages
   }
 }

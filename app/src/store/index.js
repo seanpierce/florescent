@@ -16,7 +16,7 @@ export default new Vuex.Store({
   },
   actions: {
     getGalleryImages: context => {
-      axios.get(settings.API_BASE_URL + '/api/gallery/images/')
+      axios.get(settings.API_BASE_URL + 'api/gallery/images/')
         .then(res => {
           context.commit('INSERT_GALLERY_IMAGES', res.data.results);
         })
