@@ -28,6 +28,11 @@ export default {
             showMenu: false
         }
     },
+    watch:{
+        $route(){
+            this.showMenu = false;
+        }
+    },
     methods: {
         toggleMenu() {
             this.showMenu = !this.showMenu;

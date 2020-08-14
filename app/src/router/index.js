@@ -6,23 +6,29 @@ Vue.use(VueRouter)
 
   const routes = [
   {
-    path: '/',
     name: 'Home',
+    path: '/',
     component: Home
   },
   {
-    path: '/gallery',
     name: 'Gallery',
+    path: '/gallery',
     component: () => import('@/views/Gallery.vue')
   },
   {
-    path: '/shop',
+    name: 'Gallery Detail',
+    path: '/gallery/:id',
+    props: true,
+    component: () => import('@/views/GalleryDetail.vue')
+  },
+  {
     name: 'Shop',
+    path: '/shop',
     component: () => import('@/views/Shop.vue')
   },
   {
-    path: '/contact',
     name: 'Contact',
+    path: '/contact',
     component: () => import('@/views/Contact.vue')
   }
 ]

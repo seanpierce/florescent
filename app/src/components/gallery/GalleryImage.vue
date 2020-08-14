@@ -1,9 +1,9 @@
 <template>
     <div class="gallery-image">
-        <a :href="galleryImage.image">
+        <router-link :to="'/gallery/' + galleryImage.id">
             <img :src="galleryImage.image" 
                 :alt="galleryImage.alt_text">
-        </a>
+        </router-link>
     </div>
 </template>
 

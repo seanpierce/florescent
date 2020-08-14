@@ -22,6 +22,9 @@ export default new Vuex.Store({
         })
     }
   },
-  modules: {
+  getters: {
+    getGalleryImageById: state => id => {
+      return state.galleryImages.find(image => image.id == id);
+    } 
   }
 })

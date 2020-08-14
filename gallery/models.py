@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.files.storage import FileSystemStorage
+from django.utils.html import mark_safe
 
 fs = FileSystemStorage(location='media/')
 
@@ -12,6 +13,9 @@ class Image(models.Model):
     created_at = models.DateTimeField(auto_now=True)
     alt_text = models.CharField(max_length=255, null=True, blank=True)
     image = models.ImageField(storage=fs)
+
+    def image_preview(self):
+            return mark_safe('<img src="/media/%s" height="150" />' % (self.image))
 
     class Meta:
         ordering = ['created_at']

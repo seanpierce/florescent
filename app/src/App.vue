@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Menu />
+    <Menu v-show="showMenu" />
     <router-view/>
   </div>
 </template>
@@ -11,6 +11,11 @@ import Menu from '@/components/Menu.vue';
 export default {
   components: {
     Menu
+  },
+  computed: {
+    showMenu() {
+      return this.$route.name !== 'Home'
+    }
   },
   created() {
     this.$store.dispatch('getGalleryImages');
