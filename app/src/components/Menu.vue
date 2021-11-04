@@ -28,7 +28,7 @@ export default {
             showMenu: false
         }
     },
-    watch:{
+    watch: {
         $route(){
             this.showMenu = false;
         }

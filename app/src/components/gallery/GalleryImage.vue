@@ -18,6 +18,6 @@ export default {
     },
     props: {
         galleryImage: Object
-    }
+    },
 }
 </script>
